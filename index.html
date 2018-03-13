@@ -1,42 +1,157 @@
 <!doctype html>
 <html lang="en">
   <head>
-<meta charset="utf-8">
+<meta charset="utf-24">
 <style type="text/css">
-html, 
+
+table, th, td {
+    border: 3px solid #98fb98;
+    border-collapse:collapse;
+}
+
 body {
 height: 100%;
 }
 body {
-background-image: url(images/snowman.jpg);
+background-image: url(images/jojojo.jpg);
+background-repeat: no-repeat;
 background-size: cover;
 }
 body {
-        color: red;
+        color: white;
 }
 h1 {
-        color: #00FF00;
+        color: skyblue;
 }
 p {
         color: rgb(255,0,0)
 }
 </style>
+</h1>
+<script type="text/javascript">
+  var currentTime = new Date();
+  var hours = currentTime.getHours();
+  var minutes = currentTime.getMinutes();
+  var seconds = currentTime.getSeconds();
+  var suffix = "AM";  // use AM by default
+
+  if (seconds <= 9)
+    seconds = "0" + seconds;
+    
+  if (minutes < 10)
+    minutes = "0" + minutes;
+
+  if (hours >= 12) {
+    suffix = "PM";
+    hours = hours - 12;
+  }
+  if (hours == 0) {
+    hours = 12;
+  }
+
+  document.write("<b><div id='d1'>" + hours + ":" +
+   minutes + ":" + seconds + " " + suffix + "</div></b>");
+   
+  var currentDate = new Date(),
+      day = currentDate.getDate(),
+      month = currentDate.getMonth() + 1,
+      year = currentDate.getFullYear();
+  document.write(day + "/" + month + "/" + year)
+  function updateTime(){
+    var currentTime = new Date()
+    var hours = currentTime.getHours()
+    var minutes = currentTime.getMinutes()
+    if (minutes < 10){
+        minutes = "0" + minutes
+    }
+    var Date = hours + ":" + minutes + " ";
+    if(hours > 11){
+        Date += "PM";
+    } else {
+        Date += "AM";
+    }
+    document.getElementById('time_span').innerHTML = Date;
+}
+setInterval(updateTime, 1000);
+function hideElement(id_attribute_value) {
+	  		  if (document.getElementById &&
+				  document.getElementById(id_attribute_value) &&
+		  		  document.getElementById(id_attribute_value).style
+	  		  ) {
+  document.getElementById(id_attribute_value).style.visibility = "hidden";
+		  	  };
+	  		}
+          </script>
+          <button type="button" onclick="hideElement('d1');">hide div</button>
+      </body>
+</script>
+<br>
+
+</script>
+</body>
     <title>Home</title>
   </head>
   <body>
     <a href="index.html">Home</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="CSPP2.html">CSPP2</a>
-    <a href="Scratch.html">Scratch Project</a>
-    <a href="http://www.google.com">FAV WEBSITE</a>
-    <a href="files2/qgfun.aia">Fidget Spinner App!</a>
-    <a href="https://repl.it/MbAw/2">Choose your own adventure!</a>.
-    <a href="files2/Project.py" download>Play tic-tac-toe!</a>
+    <a href="Gallery.html">Gallery</a>
 <br>
-    <a href="files2/comp science.pdf" download>AP comp science questions</a>
-    <a href="files2/tesla powerwall.pdf" download>AP comp science Powerwall</a>
-    <h1>WELCOME TO MY WEBSITE</h1>
-    <img src="images/pupe.gif" height="250">
+    <h1 align="center" height="100">WELCOME</h1>
 <br>
-  </body>
+
+<table align="center" style="width:50%">
+    
+    <tr>
+        <th><mark>Project Number</mark></th>
+        <th><mark>Project Name</mark></th>
+        <th><mark>Link</mark></th>
+    </tr>
+    <tr>
+        <td><mark>Project #1</mark></td>
+        <td><mark>Scratch Project</mark></td>
+        <td><a href="Scratch.html"></p><mark>Albert's Scratch Project</mark></a></td>
+    </tr>
+    <tr>
+        <td><mark>Project #2</mark></td>
+        <td><mark>Fav Website</mark></td>
+        <td><a href="http://www.google.com"><mark>FAV WEBSITE</mark></a></td>
+    </tr>
+    <tr>
+        <td><mark>Project #3</mark></td>
+        <td><mark>Cool New App</mark></td>
+        <td><a href="files2/qgfun.aia"><mark>CYO App</mark></a></td>
+    </tr>
+    <tr>
+        <td><mark>Project #4</mark></td>
+        <td><mark>Choose Your Own Adv</mark></td>
+        <td><a href="https://repl.it/MbAw/2"><mark>A tale of life and death</mark></a></td>
+    </tr>
+    <tr>
+        <td><mark>Project #5</mark></td>
+        <td><mark>Game Game Game</mark></td>
+        <td><a href="files2/Project.py"><mark>Best Tic Tac Toe</mark></a></a></td>
+    </tr>
+    <tr>
+        <td><mark>Project #6<mark></td>
+        <td><mark>AP Written Responses</mark></td>
+        <td><a href="files2/comp science.pdf" download><mark>AP comp science questions</mark></a></td>
+    </tr>
+    <tr>
+        <td><mark>Project #7</mark></td>
+        <td><mark>AP Artifact</mark></td>
+        <td><a href="files2/tesla powerwall.pdf" download><mark>AP comp science Powerwall</mark></a></td>
+    </tr>
+    
+    
+    
+    
+</table>
+  
+
+  
+  
+  
+  
+  
 </html>
