@@ -3,39 +3,128 @@
   <head>
 <meta charset="utf-8">
 <style type="text/css">
-html, 
+
+table, th, td {
+    border: 3px solid #98fb98;
+    border-collapse:collapse;
+}
+
 body {
 height: 100%;
 }
 body {
-background-image: url(images/trevifountain.jpg);
-background-size: cover;
+background-image: url(images/rohan.png);
+background-repeat: no-repeat;
+background-size: 100%;
 }
 body {
         color: red;
 }
 h1 {
-        color: #00FF00;
+        color: skyblue; 
 }
 p {
         color: rgb(255,0,0)
 }
 </style>
+</h1>
+<script type="text/javascript">
+  var currentTime = new Date();
+  var hours = currentTime.getHours();
+  var minutes = currentTime.getMinutes();
+  var suffix = "AM";  // use AM by default
+
+  if (minutes < 10)
+    minutes = "0" + minutes;
+
+  if (hours >= 12) {
+    suffix = "PM";
+    hours = hours - 12;
+  }
+  if (hours == 0) {
+    hours = 12;
+  }
+
+  document.write("<b><div id='d1'>" + hours + ":" +
+   minutes + " " + suffix + "</div></b>");
+   
+  var currentDate = new Date(),
+      day = currentDate.getDate(),
+      month = currentDate.getMonth() + 1,
+      year = currentDate.getFullYear();
+  document.write(day + "/" + month + "/" + year)
+  
+</script>
+<br>
     <title>cspP2</title>
   </head>
   <body>
     <a href="index.html">Home</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="CSPP2.html">CSPP2</a>
-    <a href="Scratch.html">Scratch Project</a>
-    <a href="http://www.google.com">FAV WEBSITE</a>
-    <a href="files2/qgfun.aia">Fidget Spinner App!</a>
-    <a href="https://repl.it/MbAw/2">Choose your own adventure!</a>
-    <a href="files2/Project.py">Play tic-tac-toe!</a>
+    <a href="Gallery.html">Gallery</a>
 <br>
-    <a href="files2/comp science.pdf" download>AP comp science questions</a>
-    <a href="files2/tesla powerwall.pdf" download>AP comp science Powerwall</a>
-    <h1>CSPP2</h1>
-    <img src="pupe.gif" height="500"><html>
+<iframe src="https://www.youtube.com/watch?v=i3lF9A0Z6h8&"
+   width="560" height="315" frameborder="0" allowfullscreen></iframe>
   </body>
+  
+<table align="center" style="width:50%">
+    
+    <tr>
+        <th><mark>Project Number</mark></th>
+        <th><mark>Project Name</mark></th>
+        <th><mark>Link</mark></th>
+    </tr>
+    <tr>
+        <td><mark>Project #1</mark></td>
+        <td><mark>Scratch Project</mark></td>
+        <td><a href="Scratch.html"></p><mark>Albert's Scratch Project</mark></a></td>
+    </tr>
+    <tr>
+        <td><mark>Project #2</mark></td>
+        <td><mark>Fav Website</mark></td>
+        <td><a href="http://www.google.com"><mark>FAV WEBSITE</mark></a></td>
+    </tr>
+    <tr>
+        <td><mark>Project #3</mark></td>
+        <td><mark>Cool New App</mark></td>
+        <td><a href="files2/qgfun.aia"><mark>Fidget Spinner App!</mark></a></td>
+    </tr>
+    <tr>
+        <td><mark>Project #4</mark></td>
+        <td><mark>Choose Your Own Adv</mark></td>
+        <td><a href="https://repl.it/MbAw/2"><mark>A tale of life and death</mark></a></td>
+    </tr>
+    <tr>
+        <td><mark>Project #5</mark></td>
+        <td><mark>Game Game Game</mark></td>
+        <td><a href="files2/Project.py"><mark>Best Tic Tac Toe</mark></a></a></td>
+    </tr>
+    <tr>
+        <td><mark>Project #6<mark></td>
+        <td><mark>AP Written Responses</mark></td>
+        <td><a href="files2/comp science.pdf" download><mark>AP comp science questions</mark></a></td>
+    </tr>
+    <tr>
+        <td><mark>Project #7</mark></td>
+        <td><mark>AP Artifact</mark></td>
+        <td><a href="files2/tesla powerwall.pdf" download><mark>AP comp science Powerwall</mark></a></td>
+    </tr>
+    <tr>
+        <td><mark>Project #8</mark></td>
+        <td><mark>AP CSP Written Responses</mark></td>
+        <td><a href="files2/AP CSP Written responses Alberto Reyes.pdf" download><mark>AP CSP Written Responses</mark></a></td>
+    
+    
+    
+    
+</table>
+  
+
+  
+  
+  
+  
+  
+</html>
 </html>
